@@ -13,3 +13,10 @@ composerPackages=(
 )
 
 php $HOME/.bin/composer global require ${composerPackages[@]}
+
+# Link MAMP PHP binaries to local path
+rm ~/.bin/php*
+for phpVersion in /Applications/MAMP/bin/php/php*
+do
+  ln -snvf $phpVersion/bin/php "$HOME/.bin/$(basename $phpVersion | sed -e 's/\(php[^.]*\)\.\([^.]*\)\(.*\)/\1\2/g')"
+done
