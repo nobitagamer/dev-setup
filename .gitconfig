@@ -1,3 +1,7 @@
+[user]
+	name = Helmut Hummel
+	email = info@helhum.io
+
 [alias]
 
     # View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -71,6 +75,17 @@
             git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
         fi \
     }; f"
+    st = status
+  	pr = create-pull
+    cp = cherry-pick
+    search = search-commit-message
+  	oldest-ancestor = !bash -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
+  	start = !git init && git commit --allow-empty -m \"Initial commit\"
+#    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --\n
+#  	save = !git stash save $(date +%F_%T)
+
+[rerere]
+	enabled = 1
 
 [apply]
 
@@ -138,12 +153,12 @@
 
 [push]
 
-    # Use the Git 1.x.x default to avoid errors on machines with old Git
-    # installations. To use `simple` instead, add this to your `~/.extra` file:
-    # `git config --global push.default simple`. See http://git.io/mMah-w.
-    default = matching
+    default = tracking
     # Make `git push` push relevant annotated tags when pushing branches out.
     followTags = true
+
+[branch]
+	autosetuprebase = remote
 
 # URL shorthands
 
@@ -166,3 +181,8 @@
 [url "git://gist.github.com/"]
 
     insteadOf = "gist:"
+
+[url "ssh://helhum@review.typo3.org:29418"]
+
+  	pushInsteadOf = git://git.typo3.org
+    pushInsteadOf = https://git.typo3.org
