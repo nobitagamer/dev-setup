@@ -150,6 +150,13 @@ apps=(
   dropbox
   teamviewer
   appcleaner
+  hazel
+  gpgtools
+  bettertouchtool
+  totalfinder
+  bartender
+  caffeine
+  istat-menus
 )
 
 echo "[+] installing apps ..."
