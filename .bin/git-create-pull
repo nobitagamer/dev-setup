@@ -1,0 +1,15 @@
+#!/bin/bash
+[ -z "$1" ] && echo 'Please specify the name of the pull request branch' && exit 1
+pr_branch="$1"
+base_branch="$2"
+[ -z "$base_branch" ] && base_branch="master"
+[ -z "$remote" ] && remote="helhum"
+
+git push $remote origin/$base_branch:$base_branch
+git push $remote HEAD:"$pr_branch"
+git checkout $remote/$pr_branch -b $pr_branch
+open $(hub pull-request -b $base_branch -m "$(git log --format=%B -n 1 HEAD)")
+echo
+echo "Pull request created. To delete local branch, type:"
+echo "git branch -D $pr_branch"
+
