@@ -175,7 +175,7 @@ macApps=(
   407963104 #'Pixelmator'
   682658836 #'GarageBand'
   409203825 #'Numbers'
-#  497799835 #'Xcode'
+  497799835 #'Xcode'
   409201541 #'Pages'
   408981434 #'iMovie'
   685953216 #'Instashare'
