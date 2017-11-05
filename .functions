@@ -1,3 +1,8 @@
+# import bashmarks
+if [ -f ~/.init/bashmarks.sh ]; then
+   source ~/.init/bashmarks.sh
+fi
+
 # Create a new directory and enter it
 function mkd() {
     mkdir -p "$@" && cd "$_";

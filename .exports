@@ -22,3 +22,9 @@ export GREP_OPTIONS='--color=auto';
 
 # Allow 4 path parts in prompt before trimming
 export PROMPT_DIRTRIM=4
+
+# Some default bashmarks
+export DIR_drop="$HOME/Dropbox"
+export DIR_dl="$HOME/Downloads"
+export DIR_dp="$HOME/Desktop"
+export DIR_devsetup="$HOME/Developer/dev-setup"

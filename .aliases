@@ -17,9 +17,6 @@ alias gti="hub"
 alias git="hub"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
 alias g="git"
 alias h="history"
 alias j="jobs"
