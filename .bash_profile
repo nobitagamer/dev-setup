@@ -1,6 +1,6 @@
 # Use sensible bash
-if [ -f ~/.bin/sensible.bash ]; then
-   source ~/.bin/sensible.bash
+if [ -f ~/.init/sensible.bash ]; then
+   source ~/.init/sensible.bash
 fi
 
 # Load the shell dotfiles, and then some:
