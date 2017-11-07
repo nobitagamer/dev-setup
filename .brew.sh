@@ -159,6 +159,7 @@ apps=(
   caffeine
   istat-menus
   libreoffice
+  little-snitch
 )
 
 echo "[+] installing apps ..."
