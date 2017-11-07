@@ -158,6 +158,7 @@ apps=(
   bartender
   caffeine
   istat-menus
+  libreoffice
 )
 
 echo "[+] installing apps ..."
