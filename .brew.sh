@@ -214,6 +214,7 @@ osascript -e 'tell application "System Events" to make login item at end with pr
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Bartender 3.app", hidden:false}' > /dev/null
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Caffeine.app", hidden:false}' > /dev/null
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Alfred 3.app", hidden:false}' > /dev/null
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/BetterTouchTool.app", hidden:false}' > /dev/null
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"'$HOME'/Library/PreferencePanes/Hazel.prefPane/Contents/MacOS/HazelHelper.app", hidden:false}' > /dev/null
 
 # Remove outdated versions from the cellar.
