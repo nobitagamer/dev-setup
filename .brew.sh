@@ -154,7 +154,6 @@ apps=(
   hazel
   gpgtools
   bettertouchtool
-  totalfinder
   bartender
   caffeine
   istat-menus
